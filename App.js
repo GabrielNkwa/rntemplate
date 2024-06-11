@@ -14,11 +14,12 @@ import {SafeAreaView, StyleSheet, Text} from 'react-native';
 // import ForgotPasswordScreen from './src/screens/ForgorPasswordScreen';
 // import SignUpScreen from './src/screens/SignUpScreen';
 import NewPasswordScreen from './src/screens/NewPasswordScreen';
+import Navigation from './src/navigation';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <NewPasswordScreen />
+      <Navigation />
     </SafeAreaView>
   );
 };
