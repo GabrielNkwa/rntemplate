@@ -41,55 +41,53 @@ const SigninScreen = () => {
   };
 
   return (
-    <ScrollView showsHorizontalScrollIndicator={false}>
-      <View style={[styles.root, {height: height * 0.3}]}>
-        <Image source={Logo} style={styles.logo} resizeMode="contain" />
+    <View style={[styles.root, {height: height * 0.3}]}>
+      <Image source={Logo} style={styles.logo} resizeMode="contain" />
 
-        <CustomInput
-          placeholder="Username"
-          value={username}
-          setValue={setUsername}
-        />
-        <CustomInput
-          placeholder="Password"
-          value={password}
-          setValue={setPassword}
-          secureTextEntry
-        />
+      <CustomInput
+        placeholder="Username"
+        value={username}
+        setValue={setUsername}
+      />
+      <CustomInput
+        placeholder="Password"
+        value={password}
+        setValue={setPassword}
+        secureTextEntry
+      />
 
-        <CustomButton text="Sign in" onPress={onSignInPressed} />
+      <CustomButton text="Sign in" onPress={onSignInPressed} />
 
-        <CustomButton
-          text="Forgot Password"
-          onPress={onForgotPasswordPressed}
-          type="TERTIARY"
-        />
+      <CustomButton
+        text="Forgot Password"
+        onPress={onForgotPasswordPressed}
+        type="TERTIARY"
+      />
 
-        <CustomButton
-          text="Sign in with FaceBook"
-          onPress={onSignInFaceBook}
-          bgColor="#E7EAF4"
-          fgColor="#4765A9"
-        />
-        <CustomButton
-          text="Sign in with Google"
-          onPress={onSignInGoogle}
-          bgColor="#FAE9EA"
-          fgColor="#DD4D44"
-        />
-        <CustomButton
-          text="Sign in with Apple"
-          onPress={onSignInApple}
-          bgColor="#e3e3e3"
-          fgColor="#363636"
-        />
-        <CustomButton
-          text="Don't have an Account? Create One"
-          onPress={onSignUpPressed}
-          type="TERTIARY"
-        />
-      </View>
-    </ScrollView>
+      <CustomButton
+        text="Sign in with FaceBook"
+        onPress={onSignInFaceBook}
+        bgColor="#E7EAF4"
+        fgColor="#4765A9"
+      />
+      <CustomButton
+        text="Sign in with Google"
+        onPress={onSignInGoogle}
+        bgColor="#FAE9EA"
+        fgColor="#DD4D44"
+      />
+      <CustomButton
+        text="Sign in with Apple"
+        onPress={onSignInApple}
+        bgColor="#e3e3e3"
+        fgColor="#363636"
+      />
+      <CustomButton
+        text="Don't have an Account? Create One"
+        onPress={onSignUpPressed}
+        type="TERTIARY"
+      />
+    </View>
   );
 };
 
