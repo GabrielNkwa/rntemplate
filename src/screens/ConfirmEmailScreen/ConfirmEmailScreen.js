@@ -11,12 +11,15 @@ import React, {useState} from 'react';
 import Logo from '../../../assets/images/Logo_1.png';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 
 const ConfirmEmailScreen = () => {
+  const navigation = useNavigation();
+
   const [code, setCode] = useState('');
 
   const onConfirmPressed = () => {
-    console.warn('Confirm');
+    navigation.navigate('Home');
   };
 
   const onResend = () => {
@@ -24,11 +27,8 @@ const ConfirmEmailScreen = () => {
   };
 
   const onSignInPressed = () => {
-    console.warn('SignIn');
+    navigation.navigate('SignIn');
   };
-  
-
-  
 
   return (
     <View style={styles.root}>
@@ -42,18 +42,12 @@ const ConfirmEmailScreen = () => {
 
       <CustomButton text="Confirm" onPress={onConfirmPressed} />
 
-      <CustomButton
-        text="Resend Code"
-        onPress={onResend}
-        type="SECONDARY"
-      />
+      <CustomButton text="Resend Code" onPress={onResend} type="SECONDARY" />
       <CustomButton
         text="Back to Sign In"
         onPress={onSignInPressed}
         type="TERTIARY"
       />
-
-
     </View>
   );
 };

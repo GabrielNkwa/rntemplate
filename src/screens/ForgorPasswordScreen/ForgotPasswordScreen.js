@@ -11,20 +11,18 @@ import React, {useState} from 'react';
 import Logo from '../../../assets/images/Logo_1.png';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 
 const ForgotPasswordScreen = () => {
+  const navigation = useNavigation();
   const [username, setUsername] = useState('');
 
   const onSendPressed = () => {
-    console.warn('Confirm');
-  };
-
-  const onResend = () => {
-    console.warn('Resend Codd');
+    navigation.navigate('NewPassword');
   };
 
   const onSignInPressed = () => {
-    console.warn('SignIn');
+    navigation.navigate('SignIn');
   };
 
   return (

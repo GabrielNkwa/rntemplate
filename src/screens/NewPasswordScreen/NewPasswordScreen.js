@@ -11,20 +11,19 @@ import React, {useState} from 'react';
 import Logo from '../../../assets/images/Logo_1.png';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
-
+import {useNavigation} from '@react-navigation/native';
 const NewPasswordScreen = () => {
   const [code, setCode] = useState('');
   const [newPassword, setNewPassword] = useState('');
-  const onSubmitPressed = () => {
-    console.warn('Confirm');
-  };
 
-  const onResend = () => {
-    console.warn('Resend Codd');
+  const navigation = useNavigation();
+
+  const onSubmitPressed = () => {
+    navigation.navigate('Home');
   };
 
   const onSignInPressed = () => {
-    console.warn('SignIn');
+    navigation.navigate('SignIn');
   };
 
   return (
